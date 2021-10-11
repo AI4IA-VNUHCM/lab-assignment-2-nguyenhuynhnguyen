@@ -14,12 +14,23 @@ ______________________________________
 #include <stdlib.h>
 #include <math.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 	//testing variable, applying it to your algorithm for auto-evaluating
 	int n = atoi(argv[1]);
 	int result;
 	//Your codes here
-	
+
+	result = n % 2 == 0 ? 2 : 1;
+	int counter = n % 2 == 0 ? 2 : 1;
+	// printf("Counter\tResult\n");
+	while (counter <= n)
+	{
+		// printf("%d\t%d\n", counter, result);
+		result = result * counter;
+		counter += 2;
+	}
+
 	printf("%d", result);
 	return 0;
 }
