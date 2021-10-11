@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 	for (size_t i = 0; i < n/2; i++)
 	{
 		// printf("%d ", test_array[i]);
-		for (size_t j = 0; j < n-i-1; j++)
+		for (size_t j = 0; j < i; j++)
 		{
 			if (test_array[i] < test_array[j]){
 				swap(&test_array[i], &test_array[j]);
@@ -43,10 +43,10 @@ int main(int argc, char *argv[]) {
 		
 	}
 
-	for (size_t i = n/2; i < n; i++)
+	for (size_t i = (n/2); i < n; i++)
 	{
 		// printf("%d ", test_array[i]);
-		for (size_t j = n/2; j < n; j++)
+		for (size_t j = (n/2); j < n; j++)
 		{
 			if (test_array[i] > test_array[j]){
 				swap(&test_array[i], &test_array[j]);
