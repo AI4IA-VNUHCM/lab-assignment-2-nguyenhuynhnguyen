@@ -14,23 +14,32 @@ ______________________________________
 #include <stdlib.h>
 #include <math.h>
 
-int main(int argc, char *argv[])
-{
-	//testing variable, applying it to your algorithm for auto-evaluating
-	int n = atoi(argv[1]);
-	int result;
-	//Your codes here
-
+unsigned long long exercise2(int n) {
+	unsigned long long result;
 	result = n % 2 == 0 ? 2 : 1;
 	int counter = n % 2 == 0 ? 2 : 1;
 	// printf("Counter\tResult\n");
 	while (counter <= n)
 	{
-		// printf("%d\t%d\n", counter, result);
+		// printf("%d\t%llu\n", counter, result);
 		result = result * counter;
 		counter += 2;
 	}
+	return result;
+}
 
-	printf("%d", result);
+int main(int argc, char *argv[])
+{
+	//testing variable, applying it to your algorithm for auto-evaluating
+	int n = atoi(argv[1]);
+	unsigned long long result = exercise2(n);
+	//Your codes here	
+	// for (size_t i = 0; i < 22; i++)
+	// {
+	// 	unsigned long long v = exercise2(i);
+	// 	printf("%zu -> %llu\n", i, v);
+	// }
+
+	printf("%llu", result);
 	return 0;
 }
